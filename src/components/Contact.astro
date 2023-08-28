@@ -1,8 +1,6 @@
 ---
+import Form from "./Form";
 const wpp = "../images/whatsapp.png";
-const formSubmit = import.meta.env.FORM_SUBMIT;
-const front_URL = import.meta.env.FRONT_URL;
-const todayDate = new Date();
 ---
 <section class="flex justify-center items-center bg-[#141933] pt-16 pb-16">
     <div class="flex flex-wrap justify-center sm:shadow-custom sm:shadow-[#19126C] sm:w-[32rem] lg:w-auto">
@@ -18,29 +16,7 @@ const todayDate = new Date();
         </article>
         <article class="bg-white h-[34rem] w-[80%] sm:w-[32rem] rounded-b-lg lg:rounded-r-lg lg:rounded-bl-none">
             <h4 class=" font-bold text-[1.2rem] sm:text-[1.8rem] text-center pt-10">Cuentanos sobre tu proyecto!</h4>
-            <form class="flex flex-col items-center gap-4 mt-6" action={formSubmit} method="POST">
-                <input name="Date" type="hidden" value={todayDate.toLocaleString()}>
-                <div class="flex items-center w-[70%] h-16 -ml-3">
-                    <img class="w-6 h-6 opacity-60" src="../images/user.png" alt="icon user">
-                    <input name="Full_Name" type="text" placeholder="Nombre completo" class=" w-[85%] ml-3 pl-1 h-10 border-0 border-b border-gray-400 text-sm font-medium outline-none hover:border-secondary-light focus:border-b-2 focus:border-secondary-light">
-                </div>
-                <div class="flex items-center w-[70%] h-16 -ml-3">
-                    <img class="w-6 h-6" src="../images/email.png" alt="icon email">
-                    <input name="Email" type="email" placeholder="Ingrese Email" class=" w-[85%] ml-3 pl-1 h-10 border-0 border-b border-gray-400 text-sm font-medium outline-none hover:border-secondary-light focus:border-b-2 focus:border-secondary-light">
-                </div>
-                <div class="flex items-center w-[70%] h-16 -ml-3">
-                    <img class="w-6 h-6" src="../images/phone.png" alt="icon user">
-                    <input name="Phone" type="text" placeholder="Ingrese celular" class=" w-[85%] ml-3 pl-1 h-10 border-0 border-b border-gray-400 text-sm font-medium outline-none hover:border-secondary-light focus:border-b-2 focus:border-secondary-light">
-                </div>
-                <textarea name="Message" class="h-[7.5rem] w-[70%] resize-none border border-gray-400 rounded-lg p-3 mt-3 text-xs font-semibold outline-none focus:border-secondary-light focus:border-2 scrollbar" placeholder="Mensaje"></textarea>
-                <button type="submit" class="flex justify-center items-center gap-1 text-[.8rem] font-medium text-white bg-[#7683F9] bg-opacity-100 w-[8rem] h-[2.3rem] rounded-sm transition-all mb-1 hover:bg-secondary-light">Enviar iniciativa</button>
-
-                <input type="hidden" name="_next" value={front_URL}>
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="box">
-                <input type="hidden" name="_subject" value="Nimion Client Message!">
-                <input type="hidden" name="_cc" value="cristianlotorto@gmail.com,yhanahi16@gmail.com">
-            </form>
+            <Form client:only="react" />
         </article>
     </div>
 </section>
