@@ -47,15 +47,16 @@ import Header from "./Header.astro";
 </section>
 
 <script>
-    const underline = document.getElementById('underline-title');
-    const underTitleSection = document.getElementById('uder-title-section');
+    if (typeof document !== 'undefined') {
+        const underline = document.getElementById('underline-title');
+        const underTitleSection = document.getElementById('uder-title-section');
 
-    setTimeout(() => {
-        underline?.setAttribute('class', 'grid place-self-center bg-secondary-light w-[50%] h-[0.2rem] rounded-3xl m-auto mt-10 transition-all animate-widther')
-    }, 1500);
-    setTimeout(() => {
-        underTitleSection?.setAttribute('class', 'animate-appear')
-    }, 2000);
-
+        setTimeout(() => {
+            underline?.setAttribute('class', 'grid place-self-center bg-secondary-light w-[50%] h-[0.2rem] rounded-3xl m-auto mt-10 transition-all animate-widther')
+        }, 1500);
+        setTimeout(() => {
+            underTitleSection?.setAttribute('class', 'animate-appear')
+        }, 2000);
+    }
 </script>
 
