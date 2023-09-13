@@ -33,22 +33,24 @@ const wpp = "../images/whatsapp.png";
 <script>
     import { toastSuccessState, toastErrorState } from '../nimionStore';
 
-    const toastSuccess = document.getElementById('toast-success-container');
-    const toastError = document.getElementById('toast-error-container');
+    if (typeof document !== 'undefined') {
+        const toastSuccess = document.getElementById('toast-success-container');
+        const toastError = document.getElementById('toast-error-container');
 
-    toastSuccessState.subscribe(success => {
-        if(success){
-            toastSuccess?.setAttribute('class', 'block');
-        }else{
-            toastSuccess?.setAttribute('class', 'hidden');
-        }
-    })
+        toastSuccessState.subscribe(success => {
+            if(success){
+                toastSuccess?.setAttribute('class', 'block');
+            }else{
+                toastSuccess?.setAttribute('class', 'hidden');
+            }
+        })
 
-    toastErrorState.subscribe(error => {
-        if(error){
-            toastError?.setAttribute('class', 'block');
-        }else{
-            toastError?.setAttribute('class', 'hidden');
-        }
-    })
+        toastErrorState.subscribe(error => {
+            if(error){
+                toastError?.setAttribute('class', 'block');
+            }else{
+                toastError?.setAttribute('class', 'hidden');
+            }
+        })
+    }
 </script>
