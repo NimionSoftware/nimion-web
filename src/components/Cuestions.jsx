@@ -5,7 +5,7 @@ const Cuestions = () => {
     const faqs = [
         {
             Qtn: ' ¿Mi negocio va a aparecer en Google?',
-            answ: 'Junto con el sitio web incluimos SEO GRATIS ¿a qué nos referimos con esto? Vas a tener una base de SEO básico para poder aparecer bien posicionado con tu sitio sin pagar un extra. Si quisieras mejorar este posicionamiento contamos con un servicio dedicado a optimizar tu sitio web para que las velocidades de carga de tu sitio sean ideales y los motores de busqueda no tengan problemas para rastrearla. Nuestro objetivo es que tu sitio web tenga un rendimiento óptimo en términos de velocidad de carga, accesibilidad y visibilidad.'
+            answ: 'Junto con el sitio web incluimos SEO GRATIS ¿a qué nos referimos con esto? Vas a tener una base de SEO básico para poder aparecer bien posicionado con tu sitio sin pagar un extra. Si quisieras mejorar este posicionamiento contamos con un servicio dedicado a optimizar tu sitio web para que las velocidades de carga sean ideales y los motores de busqueda no tengan problemas para rastrearla. Nuestro objetivo es que tu plataforma tenga un rendimiento óptimo en términos de velocidad de carga, accesibilidad y visibilidad.'
         },
         {
             Qtn: '¿Tengo que pagar un costo mensual por mi sitio web?',
@@ -13,7 +13,7 @@ const Cuestions = () => {
         },
         {
             Qtn: '¿Quién hace los diseños de mi pagina Web?',
-            answ: 'Contamos con un equipo de profesionales altamente capacitados en la creación de páginas web de alta calidad. Nuestros diseñadores web expertos se dedican a construir sitios web que combinan a la perfección estética y funcionalidad. Utilizamos las últimas tendencias y tecnologías en diseño web para garantizar que tu página tenga un aspecto moderno y atractivo. Recibiras el sitio una vez terminado y funcionando.'
+            answ: 'Contamos con un equipo de profesionales altamente capacitados en la creación de páginas web de alta calidad. Nuestros diseñadores web se dedican a construir sitios que combinan a la perfección estética y funcionalidad. Utilizamos las últimas tendencias y tecnologías en diseño web para garantizar que tu página tenga un aspecto moderno y atractivo. Recibiras el sitio una vez terminado y funcionando.'
         },
         {
             Qtn: '¿Mi página Web tambien sirve para celulares o tablets?',
@@ -21,7 +21,7 @@ const Cuestions = () => {
         },
         {
             Qtn: '¿Cúanto es el tiempo que lleva realizar la página web?',
-            answ: 'Actualmente manejamos tiempos de aproximadamente una semana laboral para realizar el diseño web, depende mucho de que tengamos toda la información que nos brinda el cliente para realizar el mismo sin contar los ajustes que quiera realizar luego de finalizado el sitio.'
+            answ: 'Hay muchos factores que influyen en el avance del proyecto, uno de ellos es que contemos con toda la información sobre los puntos de dolor que se desean curbir por parte del cliente para un avance sostenido. Se suma a esto el tiempo que lleva realizar los ajustes que se quieran implementar luego de finalizado el sitio. Actualmente manejamos tiempos de aproximadamente dos a cuatro semanas laborales para realizar el diseño web.'
         },
     ]
 
