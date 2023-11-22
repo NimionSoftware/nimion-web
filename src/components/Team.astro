@@ -7,14 +7,14 @@ const  profiles = [
     {
         devImg: yhanaPic,
         devName: 'Yhanahi Rosenthal',
-        dev: 'Desarrollador',
-        devDescription: 'Encargado de gestionar las operaciones de Nimion en la republica del Uruguay. Su dedicación y ética de trabajo inspiran a otros a superar barreras. Su destreza técnica es igualada por su colaboración sobresaliente en equipos multidisciplinarios, guiando a sus compañeros con pasión y conocimiento. Podría tranquilamente ser un Power Ranger o un Guadian de la Galaxia.'
+        dev: 'FullStack Developer',
+        devDescription: 'Encargado de coordinar, gestionar y desarrollar proyectos de Nimion en la Republica Oriental del Uruguay.'
     },
     {
         devImg: crisPic,
         devName: 'Cristian Lotorto',
-        dev: 'Desarrollador',
-        devDescription: 'Encargado de gestionar las operaciones de Nimion en la republica Argentina. Su dedicación y ética de trabajo inspiran a otros a superar barreras. Su destreza técnica es igualada por su colaboración sobresaliente en equipos multidisciplinarios, guiando a sus compañeros con pasión y conocimiento. Thor mismo temblaría si supiera que tiene que enfrentarse a él.'
+        dev: 'FullStack Developer',
+        devDescription: 'Encargado de coordinar, gestionar y desarrollar proyectos de Nimion en la Republica Argentina.'
     }
 ]
 ---
@@ -30,14 +30,14 @@ const  profiles = [
         { profiles.map((profile, index) => (
             <div class={`flex justify-center items-center w-full xl:w-1/2 ${index % 2 == 0 && 'xl:border-r-2'}`}>
                 <div class='flex flex-col my-5 xl:flex-row justify-center items-center w-144'>
-                    {index % 2 == 0 && <img class='w-36 h-36 mb-5 xl:mb-0' src={profile.devImg} alt="porfile image">}
-                    {index % 2 != 0 && <img class='w-36 h-36 mb-5 xl:hidden' src={profile.devImg} alt="porfile image">}
+                    {index % 2 == 0 && <img class='w-[30%] h-[30%] border-2 border-white mb-5 xl:mb-0' src={profile.devImg} alt="porfile image">}
+                    {index % 2 != 0 && <img class='w-[30%] h-[30%] border-2 border-white mb-5 xl:hidden' src={profile.devImg} alt="porfile image">}
                     <div class='w-auto px-10'>
                         <h5 class='mb-1 text-center xl:text-left font-semibold text-xl text-white'>{profile.devName}</h5>
                         <h6 class='mb-3 text-sm text-logo-gray underline'>{profile.dev}</h6>
                         <p class='xl:pr-8 text-sm text-justify text-logo-gray'>{profile.devDescription}</p>
                     </div>
-                    {index % 2 != 0 && <img class='w-36 h-36 xl:block hidden' src={profile.devImg} alt="porfile image">}
+                    {index % 2 != 0 && <img class='w-[30%] h-[30%] border-2 border-white xl:block hidden' src={profile.devImg} alt="porfile image">}
                 </div>
             </div>
         )
