@@ -3,21 +3,21 @@ import nimionLogo from '/public/images/nimion-primary-dark.png';
 import burgerIcon from '/public/images/menu.png';
 ---
 
-<header class="flex items-center justify-between bg-transparent 168 h-40">
+<header class="flex items-center justify-between bg-transparent-168 h-40">
     <div id="index" class="flex justify-start items-center w-[6rem] h-[6rem] ml-5 lg:ml-25">
-        <img id="logo-header" class="hover:rotate-360 duration-[1500ms]" src={nimionLogo} alt="nimion-logo">
+        <img id="logo-header" src={nimionLogo} alt="nimion-logo">
         <h4 id="header-nimion" class="opacity-0" >NIMION</h4>
     </div>
 
 
     <div class="flex flex-col top-15 right-5 relative sm:hidden">
         <img id="burger-button" class="w-[1.6rem] sm:w-auto self-end" src={burgerIcon} alt="burger-menu">
-        <div>
+        <div class="w-10">
         <ul id="nav-menu" class="hidden">
-            <li class="mr-5 hover:text-golden"><a href="#process">Proceso</a></li>
-            <li class="mr-5 hover:text-golden"><a href="#aboutUs">Nosotros</a></li>
-            <li class="mr-5 hover:text-golden"><a href="#faq">FAQ's</a></li>
-            <li class="mr-5 hover:text-golden"><a href="#contact">Contacto</a></li>
+            <li class="mr-5 mb-3 underline hover:text-golden"><a href="#process">Proceso</a></li>
+            <li class="mr-5 mb-3 underline hover:text-golden"><a href="#aboutUs">Nosotros</a></li>
+            <li class="mr-5 mb-3 underline hover:text-golden"><a href="#faq">FAQ's</a></li>
+            <li class="mr-5 mb-3 underline hover:text-golden"><a href="#contact">Contacto</a></li>
         </ul>
         </div>
     </div>
@@ -40,18 +40,15 @@ import burgerIcon from '/public/images/menu.png';
         const burguerButton = document.getElementById('burger-button');
         const navMenu = document.getElementById('nav-menu');
 
-        logoHeader?.addEventListener('mouseover', () => {
+        setTimeout(() => {
+            logoHeader?.setAttribute('class', 'rotate-360 duration-[1500ms]')
             headerNimion?.setAttribute('class', 'text-center tracking-[0.2rem] font-normal text-[2rem] w-[6rem] ml-5 animate-headerNimionAppear');
+        }, 3700);
+        burguerButton?.addEventListener('mouseover', () => {
+            navMenu?.setAttribute('class', 'absolute rounded-[1px] pl-5 py-3 origin-right bg-secondary-dark-background bg-background-triangle bg-cover bg-no-repeat z-10 top-[-2rem] right-[-1.25rem] flex flex-col lg:flex-row w-screen h-[20rem] leading-[2rem] lg:leading-none list-none items-start font-montserrat text-sm text-white justify-around animate-smallToBig');
         })
-        logoHeader?.addEventListener('mouseout', () => {
-            headerNimion?.setAttribute('class', 'text-center tracking-[0.2rem] font-normal text-[2rem] w-[6rem] ml-5 animate-headerNimionDisappear');
-        })
-        burguerButton?.addEventListener('click', () => {
-            if(navMenu?.className === "hidden"){
-                navMenu?.setAttribute('class', 'absolute rounded-[5px] pr-10 pl-5 py-3 origin-top-right bg-secondary-dark-background z-10 top-0 right-[-0.7rem] flex flex-col lg:flex-row w-auto mr-10 p-1 leading-[2rem] lg:leading-none list-none items-start justify-around font-montserrat text-sm text-white animate-smallToBig');
-            }else{
-                navMenu?.setAttribute('class', 'hidden');
-            }
+        burguerButton?.addEventListener('mouseout', () => {
+        navMenu?.setAttribute('class', 'absolute rounded-[1px] pl-5 py-3 origin-right bg-secondary-dark-background bg-background-triangle bg-cover bg-no-repeat z-10 top-[-2rem] right-[-1.25rem] flex flex-col lg:flex-row w-screen h-[20rem] leading-[2rem] lg:leading-none list-none items-start font-montserrat text-sm text-white justify-around animate-bigToSmall');
         })
     }
 </script>

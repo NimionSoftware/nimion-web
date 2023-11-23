@@ -56,6 +56,8 @@ module.exports = {
 				headerNimionAppear: 'appear 1.5s ease-in-out alternate both',
 				headerNimionDisappear: 'disappear 1.5s ease-in-out alternate both',
 				smallToBig: 'smallToBig .3s ease-in-out alternate both',
+				bigToSmall: 'bigToSmall .3s ease-in-out alternate both',
+				rotate: 'rotate 3s ease-in'
 			},
 			keyframes: {
 				'appear': {
@@ -70,10 +72,22 @@ module.exports = {
 				},
 				'smallToBig': {
 					'0%': {
-						transform: 'scale(0)'
+						transform: 'scaleX(0)',
+						opacity: '0'
 					},
 					'100%': {
-						transform: 'scale(1)'
+						transform: 'scaleX(1)',
+						opacity: '1'
+					},
+				},
+				'bigToSmall': {
+					'0%': {
+						transform: 'scaleX(1)',
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'scaleX(0)',
+						opacity: '0'
 					},
 				},
 				'disappear':{
